@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Wed Mar 16 13:02:44 2022 as: nmap -sV -oN nmap-output.txt 192.168.1.0.24
+Failed to resolve "192.168.1.0.24".
+WARNING: No targets were specified, so 0 hosts scanned.
+# Nmap done at Wed Mar 16 13:02:45 2022 -- 0 IP addresses (0 hosts up) scanned in 0.38 seconds
