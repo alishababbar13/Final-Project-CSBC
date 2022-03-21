@@ -11,15 +11,26 @@
 _TODO: Fill out the information below._
 
 The following machines were identified on the network:
-- Name of VM 1
-  - **Operating System**:
+- Name of Azure VM
+  - **Operating System**: Microsoft Windows
+  - **Purpose**: Hypervisor / Gateway
+  - **IP Address**: 192.168.1.1
+- Name of Nested VM
+  - **Operating System**: Linux
+  - **Purpose**: ELK - Elasticsearch, Logstash, Kibana Server
+  - **IP Address**: 192.168.1.100
+- Name of Nested VM
+  - **Operating System**: 
   - **Purpose**:
   - **IP Address**:
-- Name of VM 2
-  - **Operating System**:
+- Name of Nested VM
+  - **Operating System**: 
   - **Purpose**:
   - **IP Address**:
-- Etc.
+- Name of Nested VM
+  - **Operating System**: 
+  - **Purpose**:
+  - **IP Address**:
 
 ### Description of Targets
 _TODO: Answer the questions below._
