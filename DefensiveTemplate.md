@@ -11,31 +11,31 @@
 _TODO: Fill out the information below._
 
 The following machines were identified on the network:
-- Name of Azure VM
+- Hypervisor / Host Machine
   - **Operating System**: Microsoft Windows
   - **Purpose**: Hypervisor / Gateway
   - **IP Address**: 192.168.1.1
-- Name of Nested VM
-  - **Operating System**: Linux
+- ELK
+  - **Operating System**: Ubuntu Linux
   - **Purpose**: ELK - Elasticsearch, Logstash, Kibana Server
   - **IP Address**: 192.168.1.100
-- Name of Nested VM
-  - **Operating System**: 
-  - **Purpose**:
-  - **IP Address**:
-- Name of Nested VM
-  - **Operating System**: 
-  - **Purpose**:
-  - **IP Address**:
-- Name of Nested VM
-  - **Operating System**: 
-  - **Purpose**:
-  - **IP Address**:
+- CAPSTONE
+  - **Operating System**: Linux
+  - **Purpose**: Basic HTTP Server
+  - **IP Address**: 192.168.1.105
+- TARGET 1
+  - **Operating System**: Linux Debian
+  - **Purpose**: Target 1 HTTP Server (also wordpress site)
+  - **IP Address**: 192.168.1.110
+- TARGET 2
+  - **Operating System**: Linux
+  - **Purpose**: Target 2 HTTP Server
+  - **IP Address**: 192.168.1.115
 
 ### Description of Targets
 _TODO: Answer the questions below._
 
-The target of this attack was: `Target 1` (TODO: IP Address).
+The target of this attack was: `Target 1` (192.168.1.110).
 
 Target 1 is an Apache web server and has SSH enabled, so ports 80 and 22 are possible ports of entry for attackers. As such, the following alerts have been implemented:
 
