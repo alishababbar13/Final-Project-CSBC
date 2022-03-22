@@ -308,16 +308,22 @@ _TODO: Fill out the list below. Include severity, and CVE numbers, if possible._
 
 The following vulnerabilities were identified on each target:
 - Target 1
+
   **Port 22**
-  ![](./Images/Port 22 scan.png)
+![](./Images/Port22scan.png)
+
   **Port 80**
-  ![](./Images/Port 80 scan.png)
-  ![](./Images/Port 80 scan2.png)
+  
+![](./Images/Port80scan.png)
+![](./Images/Port80scan2.png)
   
   **Port 139**
-  ![](./Images/Port 139 scan.png)
+  
+![](./Images/Port139scan.png)
+
   **Port 445**
-  ![](./Images/Port 445 scan.png)
+  
+![](./Images/Port445scan.png)
 
 ### Exploitation
 _TODO: Fill out the details below. Include screenshots where possible._
