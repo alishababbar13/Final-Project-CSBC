@@ -335,34 +335,19 @@ The following vulnerabilities were identified on each target:
 _TODO: Fill out the details below. Include screenshots where possible._
 
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
-- Target 1
-  - `flag1.txt`: b9bbcb33e11b80be759c4e844862482d
-<img src="./Images/Flag1capture.png" width=600>
-    - **Exploit Used**
-    _Weak Password / SSH with password_ : After SSHing into the host with michael's credentials, we were able to search the /var/www/html directory for flag1
-      - * Commands:
-      - * ssh michael@192.168.1.110
-      - * cd /var/www/html
-      - * cat *.html | grep flag     
-      
-  - `flag2.txt`: fc3fd58dcdad9ab23faca6e9a36e581c
-<img src="./Images/flag2_again.png" width="600">
-    - **Exploit Used**
-* _Weak Password / SSH with password_ : After SSHing into the host with michael's credentials, flag2 was found right in /var/www
-* ssh michael@192.168.1.110
-* cd /var/www
-* cat flag2.txt
 
 * Target 1
     * flag1.txt: b9bbcb33e11b80be759c4e844862482d
+    * <img src="./Images/Flag1capture.png" width=600>
         * Exploit Used
             * Weak Password / SSH with password
                 * After SSHing into the host with michael's credentials, we were able to search the /var/www/html directory for flag1.
             * Commands run:
                 * ssh michael@192.168.1.100
                 * cd /var/www/html
-                * grep -ER flag1
+                * cat *.html | grep flag
     * flag2.txt: fc3fd58dcdad9ab23faca6e9a36e581c
+    * <img src="./Images/flag2_again.png" width="600">
         * Exploit Used
             * Weak Password / SSH with password
                 * After SSHing into the host with michael's credentials, flag2 was found right in /var/www
