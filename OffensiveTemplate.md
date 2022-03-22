@@ -298,18 +298,18 @@ OS and Service detection performed. Please report any incorrect results at https
 
 This scan identifies the services below as potential points of entry:
 - Target 1
-  - List of
-  - Exposed Services
+  - Port 22 (SSH)
+  - Port 80 (HTTP)
+  - Port 111 (rpcbind)
+  - Port 139 (netbios / smb)
+  - Port 445 (netbios / smb)
 
 _TODO: Fill out the list below. Include severity, and CVE numbers, if possible._
 
 The following vulnerabilities were identified on each target:
 - Target 1
-  - List of
-  - Critical
-  - Vulnerabilities
-
-_TODO: Include vulnerability scan results to prove the identified vulnerabilities._
+![](./Images/Unit_13.png)
+![](./Images/Unit_13.png)
 
 ### Exploitation
 _TODO: Fill out the details below. Include screenshots where possible._
