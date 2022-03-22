@@ -337,7 +337,7 @@ _TODO: Fill out the details below. Include screenshots where possible._
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
 - Target 1
   - `flag1.txt`:
-![](./Images/Flag1capture.png)
+<img src="./Images/Flag1capture.png" width=600>
     - **Exploit Used**
       - _Weak Password / SSH with password_ : After SSHing into the host with michael's credentials, we were able to search the /var/www/html directory for flag1
       - Commands
@@ -346,7 +346,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
       
       
   - `flag2.txt`:
-![](./Images/flag2.png)
+<img src="./Images/flag2.png" width="600">
     - **Exploit Used**
       - _TODO: Identify the exploit used_
       - _TODO: Include the command run_
