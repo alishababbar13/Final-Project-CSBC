@@ -308,12 +308,12 @@ _TODO: Fill out the list below. Include severity, and CVE numbers, if possible._
 
 The following vulnerabilities were identified on each target:
 - Target 1
-      - _wpscan user enumeration_
-      - _SSH with Password_
-      - _Python can run with sudo_
-      - _Database credentials in plain text_
-      - _CVE-2017-3167 - Authentication bypass is possible on the version of Apache running on the server_
-      - _CVE-2017-7494 - Version of samba running on the server is insecure and allows for remote code execution._
+- _wpscan user enumeration_
+- _SSH with Password_
+- _Python can run with sudo_
+- _Database credentials in plain text_
+- _CVE-2017-3167 - Authentication bypass is possible on the version of Apache running on the server.
+- _CVE-2017-7494 - Version of samba running on the server is insecure and allows for remote code execution._
  
   **Port 22**
 ![](./Images/Port22scan.png)
@@ -339,11 +339,11 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
   - `flag1.txt`:
 <img src="./Images/Flag1capture.png" width=600>
     - **Exploit Used**
-      - _Weak Password / SSH with password_ : After SSHing into the host with michael's credentials, we were able to search the /var/www/html directory for flag1
-      - Commands
-      ssh michael@192.168.1.100
-        
-      
+    _Weak Password / SSH with password_ : After SSHing into the host with michael's credentials, we were able to search the /var/www/html directory for flag1
+      - Commands:
+      - ssh michael@192.168.1.100
+      - cd /var/www/html
+      - cat *.html | grep flag     
       
   - `flag2.txt`:
 <img src="./Images/flag2.png" width="600">
