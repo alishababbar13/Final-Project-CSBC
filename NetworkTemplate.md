@@ -17,12 +17,12 @@ You must inspect your traffic capture to answer the following questions:
 ## Vulnerable Windows Machine
 
 1. Find the following information about the infected Windows machine:
-    - Host name
-    - IP address
-    - MAC address
+    - Host name : _Rotterdam-PC.mindhammer.net_
+    - IP address : _172.16.4.205_
+    - MAC address : _00:59:07:b0:63:a4_
     
-2. What is the username of the Windows user whose computer is infected?
-3. What are the IP addresses used in the actual infection traffic?
+2. What is the username of the Windows user whose computer is infected? _matthijs.devries_
+3. What are the IP addresses used in the actual infection traffic? _172.16.4.205 to 205.185.216.10_
 4. As a bonus, retrieve the desktop background of the Windows host.
 
 ---
@@ -30,8 +30,8 @@ You must inspect your traffic capture to answer the following questions:
 ## Illegal Downloads
 
 1. Find the following information about the machine with IP address `10.0.0.201`:
-    - MAC address
-    - Windows username
-    - OS version
+    - MAC address _00:16:17:18:66:c8_
+    - Windows username _elmer.blanco_
+    - OS version _Windows 10 NT 10.0_
 
-2. Which torrent file did the user download?
+2. Which torrent file did the user download? _Betty_Boop_Rhythm_on_the_Reservation.avi_
