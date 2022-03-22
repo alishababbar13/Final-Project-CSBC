@@ -308,8 +308,16 @@ _TODO: Fill out the list below. Include severity, and CVE numbers, if possible._
 
 The following vulnerabilities were identified on each target:
 - Target 1
-![](./Images/Unit_13.png)
-![](./Images/Unit_13.png)
+  **Port 22**
+  ![](./Images/Port 22 scan.png)
+  **Port 80**
+  ![](./Images/Port 80 scan.png)
+  ![](./Images/Port 80 scan2.png)
+  
+  **Port 139**
+  ![](./Images/Port 139 scan.png)
+  **Port 445**
+  ![](./Images/Port 445 scan.png)
 
 ### Exploitation
 _TODO: Fill out the details below. Include screenshots where possible._
