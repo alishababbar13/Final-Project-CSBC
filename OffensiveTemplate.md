@@ -338,14 +338,15 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
 * Target 1
     * flag1.txt: b9bbcb33e11b80be759c4e844862482d
+    * * Exploit Used
+    * Weak Password / SSH with password
+    * After SSHing into the host with michael's credentials, we were able to search the /var/www/html directory for flag1.
+    * Commands run:
+    * ssh michael@192.168.1.100
+    * cd /var/www/html
+    * cat *.html | grep flag
     * <img src="./Images/Flag1capture.png" width=600>
-        * Exploit Used
-            * Weak Password / SSH with password
-                * After SSHing into the host with michael's credentials, we were able to search the /var/www/html directory for flag1.
-            * Commands run:
-                * ssh michael@192.168.1.100
-                * cd /var/www/html
-                * cat *.html | grep flag
+   
     * flag2.txt: fc3fd58dcdad9ab23faca6e9a36e581c
     * <img src="./Images/flag2_again.png" width="600">
     * Exploit Used
