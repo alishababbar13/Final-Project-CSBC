@@ -340,8 +340,10 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 <img src="./Images/Flag1capture.png" width=600>
     - **Exploit Used**
       - _Weak Password / SSH with password_ : After SSHing into the host with michael's credentials, we were able to search the /var/www/html directory for flag1
-      - Commands
+      - Commands:
       ssh michael@192.168.1.100
+      cd /var/www/html
+      cat *.html | grep flag
         
       
       
