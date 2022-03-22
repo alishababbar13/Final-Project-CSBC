@@ -59,14 +59,14 @@ Alert 2 is implemented as follows:
   - **Metric**: http.request.bytes
   - **Threshold**: 3500 in last 1 minute
   - **Vulnerability Mitigated**: By controlling the number of http request size through a filter it protects against DDOS attacks
-  - **Reliability**: No, this alert doesn't generate a lot of false positives bc it is reliable.
+  - **Reliability**: No, this alert doesn't generate a lot of false positives because it is reliable.
 
 #### CPU Usage Monitor
 Alert 3 is implemented as follows:
   - **Metric**: system.process.cpu.total.pct
   - **Threshold**: 0.5 in last 5 minutes
   - **Vulnerability Mitigated**: By controlling the CPU usuage percentage at 50%, it will trigger a memory dump of stored information is generated
-  - **Reliability**: Yes this alert can generate a lot of false positives bc the cpu can spike even if there is not an attack.
+  - **Reliability**: Yes this alert can generate a lot of false positives because the cpu can spike even if there is not an attack.
 
 _TODO Note: Explain at least 3 alerts. Add more if time allows._
 
