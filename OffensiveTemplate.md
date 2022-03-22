@@ -363,7 +363,9 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
                 * After getting the database credentials from /var/www/html/wp_config.php, we connected to the mysql database and searched for the flag.
             * Commands run:
                 * ssh michael@192.168.1.100
-                * less /var/www/html/wordpress/wp_config.php
+                * cd /var/www/html/wordpress
+                * cat wp_config.php
+                * <img src="./Images/wpconfig.png" width="600">
                 * mysql -u root -p
                 * Password is R@v3nSecurity
                 * <img src="./Images/mysql_pass.png" width="700">
