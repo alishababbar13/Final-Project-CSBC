@@ -375,15 +375,33 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
                 * <img src="./Images/tablemysql.png" width="600">
                 * mysql> select * from wp_users;
                 * <img src="./Images/wpusers.png" width="800">
-                * mysql> select * from wp_users;
-                * This returned the value for flag 3
+                * Copied steven's hash for john command later
+                * mysql> select * from wp_posts;
+                * <img src="./Images/flag3and4.png" width="800">
+                * This returned the value for flag 3 and 4.
+                * Further to find flag 4 separately we move into steven's account to check for root access since michael does not have root access
     * flag4.txt: 715dea6c055b9fe3337544932f2941ce
         * Exploit Used
             * python can run with sudo
                 * After cracking steven's password using john and the hash found in the database, we determined that user steven could run python with sudo permissions.
+                * Copied steven's hash on my kali desktop in hash.txt
+                * Command: john ~/Desktop/hash.txt
+                * <img src="./Images/johnsteven.png" width="600">
+                * SSH to Target 1 as Steven
+                * <img src="./Images/stevenssh.png" width="600">
+                * Tried to run python shell as sudo
                 * This allows us to use python as sudo to execute a shell program, thereby granting us access to the root account.
+                * Logged in as root on Target 1
+                * Cd to root's home directory
                 * flag4.txt was found in the /root directory, the root account's home directory.
-            * Commands run:
-                * python -c 'import os; os.system("/bin/sh")'
-                * cat flag4.txt
+                * <img src="./Images/pythonshell.png" width="700">
+                * Now trying to maintain root access by adding user Kali to sudoers
+                * <img src="./Images/adduser.png" width="600">
+                * Cat sudoers file
+                * <img src="./Images/catetcsudoers.png" width="600">
+                * Nano sudoers file
+                * <img src="./Images/addtoetcsudoers.png" width="600">
+                * Now exit and ssh again as kali and check root access using the python shell
+                * <img src="./Images/kalitoroot.png" width="600">
+                * Able to maintain access as a new user
 
